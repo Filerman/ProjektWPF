@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace ProjektWPF.Models
 {
-    class NoteLongFormat : Note
+    public class NoteLongFormat : Note
     {
+        public string Content { get; set; } = "";
+
+        // public byte[]? Image { get; set; } // zapis zdjęcia jako bajty
+
+        protected override int GetContentLength()
+        {
+            return Content?.Length ?? 0;
+        }
     }
 }
