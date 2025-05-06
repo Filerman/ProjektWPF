@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProjektWPF.Models
 {
-    class NoteLongFormat
+    class NoteLongFormat : Note
     {
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace ProjektWPF.Models
 {
-    class NoteCheckList
+    class NoteCheckList : Note
     {
+        public List<string; bool> Texts;
     }
 }
