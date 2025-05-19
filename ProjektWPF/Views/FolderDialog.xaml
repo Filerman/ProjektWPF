@@ -1,0 +1,13 @@
+﻿<Window x:Class="ProjektWPF.Views.FolderDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Foldery" Height="340" Width="380" WindowStartupLocation="CenterOwner">
+    <DockPanel Margin="10">
+        <ListBox x:Name="FolderList" Height="220" DisplayMemberPath="Name"/>
+        <StackPanel DockPanel.Dock="Bottom" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="Dodaj"   Width="75" Margin="0 0 8 0" Click="Add_Click"/>
+            <Button Content="Zmień"   Width="75" Margin="0 0 8 0" Click="Rename_Click"/>
+            <Button Content="Usuń"    Width="75" Click="Delete_Click"/>
+        </StackPanel>
+    </DockPanel>
+</Window>

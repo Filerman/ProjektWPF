@@ -1,0 +1,16 @@
+﻿<Window x:Class="ProjektWPF.Views.StatsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Statystyki" Height="335" Width="520" WindowStartupLocation="CenterOwner">
+    <DockPanel Margin="10">
+        <ListView x:Name="StatsList">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Typ"           DisplayMemberBinding="{Binding Type}"   Width="130"/>
+                    <GridViewColumn Header="Liczba"        DisplayMemberBinding="{Binding Count}"  Width="80"/>
+                    <GridViewColumn Header="Suma znaków"   DisplayMemberBinding="{Binding Length}" Width="120"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </DockPanel>
+</Window>

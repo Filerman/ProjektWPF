@@ -1,9 +1,33 @@
 ﻿<Application x:Class="ProjektWPF.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:local="clr-namespace:ProjektWPF"
+             xmlns:models="clr-namespace:ProjektWPF.Models"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
-         
+        <!-- Szablony podglądu dla każdego typu notatki -->
+        <DataTemplate DataType="{x:Type models:NoteText}">
+            <ScrollViewer Margin="8">
+                <TextBlock Text="{Binding Text}" TextWrapping="Wrap"/>
+            </ScrollViewer>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type models:NoteLongFormat}">
+            <ScrollViewer Margin="8">
+                <TextBlock Text="{Binding Content}" TextWrapping="Wrap"/>
+            </ScrollViewer>
+        </DataTemplate>
+
+        <DataTemplate DataType="{x:Type models:NoteCheckList}">
+            <ItemsControl ItemsSource="{Binding Items}">
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <CheckBox IsChecked="{Binding IsDone}" Margin="0,0,6,0"/>
+                            <TextBlock Text="{Binding Text}" VerticalAlignment="Center"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </DataTemplate>
     </Application.Resources>
 </Application>

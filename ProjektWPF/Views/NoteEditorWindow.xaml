@@ -1,0 +1,23 @@
+﻿<Window x:Class="ProjektWPF.Views.NoteEditorWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Edytuj notatkę" Height="520" Width="650"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="TitleBox" Margin="0 0 0 8"/>
+
+        <!-- Tutaj dynamicznie wstawiamy edytor -->
+        <ContentControl x:Name="EditorHost" Grid.Row="1"/>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
+            <Button Content="Zapisz"  Width="90" Margin="0 0 8 0" IsDefault="True" Click="Save_Click"/>
+            <Button Content="Anuluj"  Width="90" IsCancel="True"/>
+        </StackPanel>
+    </Grid>
+</Window>
