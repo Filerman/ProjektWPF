@@ -1,7 +1,7 @@
 ﻿<Window x:Class="ProjektWPF.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Notes" Height="650" Width="1100">
+        Title="MyNotes" Height="650" Width="845">
     <DockPanel>
 
         <!-- MENU -->
@@ -42,9 +42,8 @@
         <!-- GŁÓWNA SIATKA -->
         <Grid>
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="2.2*"/>
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="4.8*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="4*"/>
             </Grid.ColumnDefinitions>
 
             <!-- TreeView – foldery -->
@@ -59,7 +58,7 @@
                       Grid.Column="1">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Tytuł"           DisplayMemberBinding="{Binding Title}" Width="160"/>
+                        <GridViewColumn Header="Tytuł"           DisplayMemberBinding="{Binding Title}" Width="300"/>
                         <GridViewColumn Header="Utworzono"       DisplayMemberBinding="{Binding CreationDate}" Width="120"/>
                         <GridViewColumn Header="Zmodyfikowano"   DisplayMemberBinding="{Binding LastModificationDate}" Width="120"/>
                         <GridViewColumn Header="Dł."             DisplayMemberBinding="{Binding Length}" Width="50"/>
@@ -68,10 +67,6 @@
                 </ListView.View>
             </ListView>
 
-            <!-- ContentControl – podgląd/edytor -->
-            <Border Grid.Column="2" BorderBrush="LightGray" BorderThickness="1" Margin="4">
-                <ContentControl x:Name="PreviewHost"/>
-            </Border>
         </Grid>
     </DockPanel>
 </Window>
