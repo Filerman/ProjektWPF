@@ -16,7 +16,7 @@ namespace ProjektWPF
         {
             InitializeComponent();
 
-            _db = new DesignTimeDbContextFactory().CreateDbContext([]);
+            //_db = new DesignTimeDbContextFactory().CreateDbContext([]);
 
             FoldersTree.ItemsSource = Folders;
             NotesList.ItemsSource = Notes;
@@ -28,8 +28,8 @@ namespace ProjektWPF
         private void LoadFolders()
         {
             Folders.Clear();
-            foreach (var f in _db.Folders)
-                Folders.Add(f);
+            //foreach (var f in _db.Folders)
+                //Folders.Add(f);
         }
         private void LoadNotes(int folderId)
         {
@@ -47,7 +47,7 @@ namespace ProjektWPF
 
         private void NotesList_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
-            PreviewHost.Content = NotesList.SelectedItem;
+            //PreviewHost.Content = NotesList.SelectedItem;
         }
         #endregion
 
