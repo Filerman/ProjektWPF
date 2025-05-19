@@ -4,7 +4,7 @@
         Title="MyNotes" Height="650" Width="1000">
     <DockPanel>
 
-        <!-- MENU -->
+        <!-- menu -->
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="_Plik">
                 <MenuItem Header="Nowa notatka _tekstowa" Click="NewTextNote_Click"/>
@@ -27,7 +27,7 @@
             </MenuItem>
         </Menu>
 
-        <!-- TOOLBAR -->
+        <!-- toolbar -->
         <ToolBarTray DockPanel.Dock="Top">
             <ToolBar>
                 <Button Content="T"      ToolTip="Nowa notatka tekstowa" Click="NewTextNote_Click"/>
@@ -39,20 +39,20 @@
             </ToolBar>
         </ToolBarTray>
 
-        <!-- GŁÓWNA SIATKA -->
+        <!-- main -->
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="4*"/>
             </Grid.ColumnDefinitions>
 
-            <!-- TreeView – foldery -->
+            <!-- foldery -->
             <TreeView x:Name="FoldersTree"
                       SelectedItemChanged="FoldersTree_SelectedItemChanged"
                       DisplayMemberPath="Name"
                       Grid.Column="0"/>
 
-            <!-- ListView – notatki -->
+            <!-- lista notatek -->
             <ListView x:Name="NotesList"
                       SelectionChanged="NotesList_SelectionChanged"
                       Grid.Column="1">

@@ -12,7 +12,6 @@
 
         <TextBox x:Name="TitleBox" Margin="0 0 0 8"/>
 
-        <!-- Tutaj dynamicznie wstawiamy edytor -->
         <ContentControl x:Name="EditorHost" Grid.Row="1"/>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right">
