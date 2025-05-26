@@ -16,7 +16,7 @@ namespace ProjektWPF
         {
             InitializeComponent();
 
-            //_db = new DesignTimeDbContextFactory().CreateDbContext([]);
+            _db = new DesignTimeDbContextFactory().CreateDbContext([]);
 
             FoldersTree.ItemsSource = Folders;
             NotesList.ItemsSource = Notes;
